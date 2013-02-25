@@ -1,0 +1,7 @@
+<p>
+    <ul>
+        <?php foreach ($transactions->getSubTransactions() as $key => $subTransaction):?>
+        <li><?php echo $subTransaction->dump();?></li>
+        <?php endforeach;?>
+    </ul>    
+</p>

@@ -1,0 +1,14 @@
+<?php
+$form = $this->form;
+$form->setAttribute('action', $this->url(
+    'album/test',
+    array(
+        'action'     => 'addstudent',
+        'controller' => 'album'
+    )
+));
+$form->prepare();
+
+echo $this->form()->openTag($form);
+echo $this->formCollection($form);
+echo $this->form()->closeTag();
