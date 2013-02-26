@@ -18,11 +18,23 @@ return array(
           ),
         ),
       ),
+      'hydrator' => array(
+          'type' => 'Literal',
+          'options' => array(
+            'route' => '/hydrator',
+            'defaults' => array(
+                '__NAMESPACE__' => 'Blog\Controller',
+                'controller' => 'Blog\Controller\Hydrator',
+                'action' => 'index'
+            ),              
+          ),
+      ),  
     ),
   ),
   'controllers' => array(
     'invokables' => array(
-      'Blog\Controller\Post' => 'Blog\Controller\PostController'
+      'Blog\Controller\Post' => 'Blog\Controller\PostController',
+      'Blog\Controller\Hydrator' => 'Blog\Controller\HydratorController'
     ),
   ),
   'view_manager' => array(
